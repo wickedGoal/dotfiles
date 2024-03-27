@@ -20,15 +20,28 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git 
-  z 
-  tmux
-  fzf
-  zsh-syntax-highlighting
-  )
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  plugins=(
+    git 
+    z 
+    tmux
+    fzf
+    zsh-syntax-highlighting
+    )
+else
+  plugins=(
+    git 
+    z 
+    tmux
+    fzf
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    )
+fi
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 source $ZSH/oh-my-zsh.sh
 
