@@ -15,6 +15,10 @@ export SECOND_BRAIN="$HOME/vault"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+
+# Set vim mode on command line
+set -o vi
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
