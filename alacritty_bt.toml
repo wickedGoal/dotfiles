@@ -1,0 +1,18 @@
+[shell]
+program = "ubuntu2204"
+
+[font]
+normal = { family = "Hack Nerd Font" }
+bold = { family = "Hack Nerd Font" }
+italic = { family = "Hack Nerd Font" }
+bold_italic = { family = "Hack Nerd Font" }
+size = 12.0
+
+[scrolling]
+history = 10000
+
+[window]
+title = "Ubuntu 22.04.3 LTS"
+decorations = "none"
+padding = { x = 7, y = 0 }
+dynamic_title = false
