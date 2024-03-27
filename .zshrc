@@ -7,6 +7,8 @@ export PATH="/opt/homebrew/opt/java/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export SECOND_BRAIN="$HOME/vault"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -55,16 +57,31 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#ls (exa with powerfont required)
 alias ll="exa -l -g --icons"
 alias lla="ll -a"
+
+#vim
 alias vi="nvim"
+alias sv="sudoedit"
+
+#tmux
+alias t="tmux"
+
+#python
 alias pip="pip3"
-alias sb="cd ~/vault"
-bindkey "ç" fzf-cd-widget
+
+#second brain
+alias sb="cd \$SECOND_BRAIN"
+
+#git
+alias lg="lazygit"
 
 
 #fzf zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey "ç" fzf-cd-widget
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
