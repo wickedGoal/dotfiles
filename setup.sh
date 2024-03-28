@@ -19,4 +19,5 @@ export XDG_CONFIG_HOME="$HOME"/.config
 ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
 ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
-ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+# -sf makes a new directory inside the destination folder
+ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
