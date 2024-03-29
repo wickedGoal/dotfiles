@@ -16,19 +16,20 @@ export SECOND_BRAIN="$HOME/vault"
 ZSH_THEME="agnoster"
 
 
-# Set vim mode on command line
-set -o vi
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# vi-mode and fzf collide with key bindings(ex. alt+c, ctrl+r) so order of loading plugins is important
+# I want my fzf shortcut to be working so it is loaded later than vi-mode
 if [[ "$OSTYPE" == "darwin"* ]]; then
   plugins=(
     git 
     z 
     tmux
+    vi-mode
     fzf
     zsh-syntax-highlighting
     )
@@ -37,17 +38,23 @@ else
     git 
     z 
     tmux
+    vi-mode
     fzf
     zsh-syntax-highlighting
     zsh-autosuggestions
     )
 fi
 
+# Somewhere in the plugins, ctrl+k is set to self-insert, ctlr+u to vi-kill-line
+bindkey "\C-k" backward-kill-line
+bindkey "\C-u" kill-line
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -98,6 +105,15 @@ alias lg="lazygit"
 #nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# Set vim mode on command line
+# set -o vi
+VI_MODE_SET_CURSOR=true
+PROMPT="$PROMPT\$(vi_mode_prompt_info)"
+MODE_INDICATOR="%F{red}>>%f"
+# INSERT_MODE_INDICATOR="%F{yellow}+>%f"
+# RPROMPT="\$(vi_mode_prompt_info)$RPROMPT"
 
 #fzf zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
