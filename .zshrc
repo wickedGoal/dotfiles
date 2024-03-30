@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/opt/java/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
 export SECOND_BRAIN="$HOME/vault"
+# export SECOND_BRAIN="/mnt/d/docs/shared/markdown_notes"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -48,6 +49,7 @@ fi
 # Somewhere in the plugins, ctrl+k is set to self-insert, ctlr+u to vi-kill-line
 bindkey "\C-k" backward-kill-line
 bindkey "\C-u" kill-line
+bindkey "^[." insert-last-word
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
