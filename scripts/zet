@@ -1,0 +1,45 @@
+#!/bin/bash
+
+get_filename() {
+    read -p "Enter a filename : " filename
+    echo "$filename"
+}
+
+open_file() {
+
+    cd "$1" || exit
+    touch "$1/$filename.md"
+
+    timestamp="$(date +"%Y%m%d %H:%M")"
+
+    {
+        echo "$timestamp"
+        echo -en "\n"
+        echo "Status: #idea"
+        echo "Tags:"
+        echo -en "\n"
+        echo "---"
+        echo -en "\n"
+        echo "# $filename"
+    } >>"$1/$filename.md"
+
+    vi '+ normal ggzzi' "$1/$filename.md"
+}
+
+if [[ $# -eq 0 ]]; then
+    filename=$(get_filename)
+    echo "$filename"
+fi
+
+if [[ $# -gt 1 ]]; then
+    echo "Enter only one filename, without .md extension."
+    echo "Example: zet new-note"
+    exit 1
+fi
+
+if [[ $# -eq 1 ]]; then
+    filename=$1
+fi
+
+
+open_file "$SECOND_BRAIN/000_Zettelkasten"
