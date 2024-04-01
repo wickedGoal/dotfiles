@@ -14,12 +14,10 @@ open_file() {
 
     {
         echo "$timestamp"
-        echo -en "\n"
         echo "Status: #idea"
         echo "Tags:"
-        echo -en "\n"
         echo "---"
-        echo -en "\n"
+# echo -en "\n"
         echo "# $filename"
     } >>"$1/$filename.md"
 
