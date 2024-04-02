@@ -11,8 +11,9 @@ export ZSH="$HOME/.oh-my-zsh"
 export DOTFILES="$HOME/dotfiles"
 export SCRIPTS="$DOTFILES/scripts"
 # export SECOND_BRAIN="/volume1/11_Obsidian/markdown_notes"
-export SECOND_BRAIN="$HOME/vault"
+# export SECOND_BRAIN="$HOME/vault"
 # export SECOND_BRAIN="/mnt/d/docs/shared/markdown_notes"
+export SECOND_BRAIN="/mnt/c/markdown_notes"
 
 export PATH=$SCRIPTS:$PATH
 
