@@ -3,12 +3,19 @@
 export PATH=$HOME/sdk/flutter/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export PATH="/opt/homebrew/opt/java/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export SECOND_BRAIN="$HOME/vault"
+export DOTFILES="$HOME/dotfiles"
+export SCRIPTS="$DOTFILES/scripts"
+# export SECOND_BRAIN="/volume1/11_Obsidian/markdown_notes"
+# export SECOND_BRAIN="$HOME/vault"
 # export SECOND_BRAIN="/mnt/d/docs/shared/markdown_notes"
+export SECOND_BRAIN="/mnt/c/markdown_notes"
+
+export PATH=$SCRIPTS:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
