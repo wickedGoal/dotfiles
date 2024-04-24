@@ -96,6 +96,7 @@ alias ll="exa -l -g --icons"
 alias lla="ll -a"
 
 #vim
+alias v="vi"
 alias vi="nvim"
 alias sv="sudoedit"
 
