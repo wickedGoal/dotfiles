@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+open_file() {
+
+    cd "$1" || exit
+
+    if [[ -f $1/$filename.md ]]; then
+    vi "$1/$filename.md"
+    else
+    touch "$1/$filename.md"
+
+    timestamp="$(date +"%Y%m%d %H:%M")"
+
+    {
+        echo "$timestamp"
+        echo "Status: #idea"
+        echo "Tags: #journal"
+        echo "---"
+# echo -en "\n"
+        echo "# $filename"
+    } >>"$1/$filename.md"
+
+    vi '+ normal ggzzi' "$1/$filename.md"
+    fi
+}
+
+filename=$(date +"%y%m%d")\ Note
+
+open_file "$SECOND_BRAIN/000_Zettelkasten"
