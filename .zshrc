@@ -100,6 +100,12 @@ alias v="vi"
 alias vi="nvim"
 alias sv="sudoedit"
 
+#pomo
+alias pomo="pomodoro"
+alias pomos="pomodoro status"
+alias pomost="pomodoro start"
+alias pomoc="pomodoro clear"
+
 #tmux
 alias t="tmux"
 
