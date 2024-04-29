@@ -4,6 +4,9 @@ export PATH=$HOME/sdk/flutter/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export PATH="/opt/homebrew/opt/java/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
+export PATH=$HOME/hugo:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
