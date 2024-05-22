@@ -119,6 +119,7 @@ alias pip="pip3"
 alias sb="cd \$SECOND_BRAIN"
 alias vn='vi "$(fzf)"'
 alias bn='bat "$(fzf)"'
+alias pro="cd \$SECOND_BRAIN/100_Project"
 
 #git
 alias lg="lazygit"
