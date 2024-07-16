@@ -11,6 +11,13 @@ export XDG_CONFIG_HOME="$HOME"/.config
 
 # git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
 
+# install programs
+sudo apt update
+sudo apt install git zsh fzf tmux -y
+
+# set zsh as default
+chsh -s $(which zsh)
+
 # Symbolic links
 
 # ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
@@ -20,4 +27,4 @@ ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
 ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 # -sf makes a new directory inside the destination folder
-ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -s "$PWD/nvim/" "$XDG_CONFIG_HOME"/nvim/
