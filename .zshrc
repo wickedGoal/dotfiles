@@ -7,6 +7,7 @@ export PATH="/usr/local/go/bin:$PATH"
 export PATH=$HOME/hugo:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/util/neovim/nvim-macos-arm64/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
