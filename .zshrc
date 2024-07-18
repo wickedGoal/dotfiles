@@ -96,7 +96,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #ls (exa with powerfont required)
-alias ll="exa -l -g --icons"
+alias ll="eza -l -g --icons"
 alias lla="ll -a"
 
 #vim
